@@ -4,7 +4,7 @@ import * as gproject from "lib-pareto-typescript-project/dist/submodules/project
 
 const d = pd.d
 
-import { $ as glossary } from "./glossary.data"
+import { $ as module } from "./schema/module.generated"
 
 export const $: gproject.T.Project<pd.SourceLocation> = {
     'author': "Corno",
@@ -14,6 +14,6 @@ export const $: gproject.T.Project<pd.SourceLocation> = {
     'dependencies': d({
     }),
     'type': ['glossary', {
-        'glossary': glossary,
+        'glossary': module.definition.glossary,//FIX this 
     }],
 }

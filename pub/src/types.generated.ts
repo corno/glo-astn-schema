@@ -3,188 +3,151 @@ import * as pt from 'pareto-core-types'
 
 export namespace T {
     
-    export namespace _$Reference {
-        
-        export type name<AReferencedType> = string
-        
-        export namespace referencee {
-            
-            export type C<AReferencedType> = AReferencedType
-        }
-        
-        export type referencee<AReferencedType> = () => AReferencedType
-    }
-    
-    export type _$Reference<AReferencedType> = {
-        readonly 'name': string
-        readonly 'referencee': () => AReferencedType
-    }
-    
     export namespace dictionary {
         
-        export type key = string
-        
-        export type value = T.value
+        export type value<GPAnnotation> = T.value<GPAnnotation>
     }
     
-    export type dictionary = {
-        readonly 'key': string
-        readonly 'value': T.value
+    export type dictionary<GPAnnotation> = {
+        readonly 'value': T.value<GPAnnotation>
     }
     
     export namespace group {
         
         export namespace properties {
             
-            export type D = T.properties
+            export type D<GPAnnotation> = T.properties<GPAnnotation>
         }
         
-        export type properties = pt.Dictionary<T.properties>
+        export type properties<GPAnnotation> = pt.Dictionary<T.properties<GPAnnotation>>
     }
     
-    export type group = {
-        readonly 'properties': pt.Dictionary<T.properties>
+    export type group<GPAnnotation> = {
+        readonly 'properties': pt.Dictionary<T.properties<GPAnnotation>>
     }
     
     export namespace list {
         
-        export type value = T.value
+        export type value<GPAnnotation> = T.value<GPAnnotation>
     }
     
-    export type list = {
-        readonly 'value': T.value
+    export type list<GPAnnotation> = {
+        readonly 'value': T.value<GPAnnotation>
     }
     
     export namespace multiline__string {}
     
-    export type multiline__string = {}
+    export type multiline__string<GPAnnotation> = {}
     
     export namespace options {
         
-        export type value = T.value
+        export type value<GPAnnotation> = T.value<GPAnnotation>
     }
     
-    export type options = {
-        readonly 'value': T.value
+    export type options<GPAnnotation> = {
+        readonly 'value': T.value<GPAnnotation>
     }
     
     export namespace properties {
         
-        export type value = T.value
+        export type value<GPAnnotation> = T.value<GPAnnotation>
     }
     
-    export type properties = {
-        readonly 'value': T.value
+    export type properties<GPAnnotation> = {
+        readonly 'value': T.value<GPAnnotation>
     }
     
-    export namespace root {
-        
-        export type root__type = T._$Reference<T.types>
+    export namespace Root {
         
         export namespace types {
             
-            export type D = T.types
+            export type D<GPAnnotation> = T.types<GPAnnotation>
         }
         
-        export type types = pt.Dictionary<T.types>
+        export type types<GPAnnotation> = pt.Dictionary<T.types<GPAnnotation>>
     }
     
-    export type root = {
-        readonly 'root type': T._$Reference<T.types>
-        readonly 'types': pt.Dictionary<T.types>
+    export type Root<GPAnnotation> = {
+        readonly 'types': pt.Dictionary<T.types<GPAnnotation>>
     }
     
     export namespace simple__string {
         
-        export type default__value = string
-        
-        export type quoted = boolean
+        export type quoted<GPAnnotation> = boolean
     }
     
-    export type simple__string = {
-        readonly 'default value': string
+    export type simple__string<GPAnnotation> = {
         readonly 'quoted': boolean
     }
     
     export namespace simple__string__type {
         
-        export type default__value = string
-        
-        export type quoted = boolean
+        export type quoted<GPAnnotation> = boolean
     }
     
-    export type simple__string__type = {
-        readonly 'default value': string
+    export type simple__string__type<GPAnnotation> = {
         readonly 'quoted': boolean
     }
     
     export namespace tagged__union {
         
-        export type default__option = T._$Reference<T.options>
-        
         export namespace options {
             
-            export type D = T.options
+            export type D<GPAnnotation> = T.options<GPAnnotation>
         }
         
-        export type options = pt.Dictionary<T.options>
+        export type options<GPAnnotation> = pt.Dictionary<T.options<GPAnnotation>>
     }
     
-    export type tagged__union = {
-        readonly 'default option': T._$Reference<T.options>
-        readonly 'options': pt.Dictionary<T.options>
+    export type tagged__union<GPAnnotation> = {
+        readonly 'options': pt.Dictionary<T.options<GPAnnotation>>
     }
     
     export namespace _ltype {
         
-        export type dictionary = T.dictionary
+        export type dictionary<GPAnnotation> = T.dictionary<GPAnnotation>
         
-        export type group = T.group
+        export type group<GPAnnotation> = T.group<GPAnnotation>
         
-        export type list = T.list
+        export type list<GPAnnotation> = T.list<GPAnnotation>
         
-        export type multiline__string = T.multiline__string
+        export type multiline__string<GPAnnotation> = T.multiline__string<GPAnnotation>
         
-        export type simple__string = T.simple__string__type
+        export type simple__string<GPAnnotation> = T.simple__string__type<GPAnnotation>
         
-        export type tagged__union = T.tagged__union
+        export type tagged__union<GPAnnotation> = T.tagged__union<GPAnnotation>
         
-        export type type__reference = T.type__reference
+        export type type__reference<GPAnnotation> = T.type__reference<GPAnnotation>
     }
     
-    export type _ltype = 
-        | ['dictionary', T.dictionary]
-        | ['group', T.group]
-        | ['list', T.list]
-        | ['multiline string', T.multiline__string]
-        | ['simple string', T.simple__string__type]
-        | ['tagged union', T.tagged__union]
-        | ['type reference', T.type__reference]
+    export type _ltype<GPAnnotation> = 
+        | ['dictionary', T.dictionary<GPAnnotation>]
+        | ['group', T.group<GPAnnotation>]
+        | ['list', T.list<GPAnnotation>]
+        | ['multiline string', T.multiline__string<GPAnnotation>]
+        | ['simple string', T.simple__string__type<GPAnnotation>]
+        | ['tagged union', T.tagged__union<GPAnnotation>]
+        | ['type reference', T.type__reference<GPAnnotation>]
     
-    export namespace type__reference {
-        
-        export type _ltype = T._$Reference<T.types>
-    }
+    export namespace type__reference {}
     
-    export type type__reference = {
-        readonly 'type': T._$Reference<T.types>
-    }
+    export type type__reference<GPAnnotation> = {}
     
     export namespace types {
         
-        export type value = T.value
+        export type value<GPAnnotation> = T.value<GPAnnotation>
     }
     
-    export type types = {
-        readonly 'value': T.value
+    export type types<GPAnnotation> = {
+        readonly 'value': T.value<GPAnnotation>
     }
     
     export namespace value {
         
-        export type _ltype = T._ltype
+        export type _ltype<GPAnnotation> = T._ltype<GPAnnotation>
     }
     
-    export type value = {
-        readonly 'type': T._ltype
+    export type value<GPAnnotation> = {
+        readonly 'type': T._ltype<GPAnnotation>
     }
 }
