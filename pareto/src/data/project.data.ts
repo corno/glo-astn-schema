@@ -9,9 +9,10 @@ import { $ as module } from "./schema/module.generated"
 export const $: gproject.T.Project<pd.SourceLocation> = {
     'author': "Corno",
     'description': "the ASTN schema, used to unmarshall a dataset",
-    'license': "ISC",
+    'license': "TBD",
 
     'dependencies': d({
+        "glo-pareto-common": {}
     }),
     'type': ['glossary', {
         'glossary': module.definition.glossary,//FIX this 
