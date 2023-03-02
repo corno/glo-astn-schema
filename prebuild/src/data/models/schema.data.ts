@@ -22,7 +22,7 @@ export const $: gliana.T.Model<pd.SourceLocation> = {
     'type library': {
         'imports': d({}),
         'string types': d({
-            "text": {},
+            "text": null,
         }),
         'global types': d({
             // "_Reference": parametrizedType({

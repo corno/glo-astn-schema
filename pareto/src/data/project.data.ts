@@ -12,7 +12,7 @@ export const $: gproject.T.Project<pd.SourceLocation> = {
     'license': "TBD",
 
     'dependencies': d({
-        "glo-pareto-common": {}
+        "glo-pareto-common": null
     }),
     'type': ['glossary', {
         'glossary': module.definition.glossary,//FIX this 

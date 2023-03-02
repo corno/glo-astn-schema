@@ -38,7 +38,7 @@ export namespace T {
     
     export namespace multiline__string {}
     
-    export type multiline__string<GPAnnotation> = {}
+    export type multiline__string<GPAnnotation> = null
     
     export namespace options {
         
@@ -132,7 +132,7 @@ export namespace T {
     
     export namespace type__reference {}
     
-    export type type__reference<GPAnnotation> = {}
+    export type type__reference<GPAnnotation> = null
     
     export namespace types {
         
