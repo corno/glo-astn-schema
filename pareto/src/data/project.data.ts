@@ -1,10 +1,12 @@
 import * as pd from 'pareto-core-data'
 
+import { external, this_ } from "lib-pareto-typescript-project/dist/submodules/project/shorthands"
+
 import * as gproject from "lib-pareto-typescript-project/dist/submodules/project"
 
 const d = pd.d
 
-import { $ as module } from "./schema/module.generated"
+import { $ as glossary } from "./glossary.generated"
 
 export const $: gproject.T.Project<pd.SourceLocation> = {
     'author': "Corno",
@@ -15,6 +17,9 @@ export const $: gproject.T.Project<pd.SourceLocation> = {
         "glo-pareto-common": null
     }),
     'type': ['glossary', {
-        'glossary': module.definition.glossary,//FIX this 
+        'root': glossary,
+        'imports': d({
+            //"common": external("glo-pareto-common"),
+        }),
     }],
 }
