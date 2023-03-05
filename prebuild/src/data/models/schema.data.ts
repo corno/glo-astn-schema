@@ -29,13 +29,13 @@ export const $: gliana.T.Model<pd.SourceLocation> = {
             //     "ReferencedType": {},
             // }, group({
             //     "name": prop(string()),
-            //     "referencee": prop(computed(typeParameter("ReferencedType")))
+            //     "referencee": prop(computed(typeParameter("ReferencedType"))),
             // })),
 
 
             "Root": globalType({}, group({
                 "types": prop(dictionary(component("types", {}))),
-                //"root type": prop()
+                //"root type": prop(),
                 // "root type": prop(parametrizedReference("_Reference", { "ReferencedType": typeReference("types")})),
 
             })),
@@ -49,16 +49,16 @@ export const $: gliana.T.Model<pd.SourceLocation> = {
             })),
             "dictionary": globalType({}, group({
                 // "key": prop(string()),
-                "value": prop(component("value", {}))
+                "value": prop(component("value", {})),
             })),
             "properties": globalType({}, group({
-                "value": prop(component("value", {}))
+                "value": prop(component("value", {})),
             })),
             "group": globalType({}, group({
-                "properties": prop(dictionary(component("properties", {})))
+                "properties": prop(dictionary(component("properties", {}))),
             })),
             "list": globalType({}, group({
-                "value": prop(component("value", {}))
+                "value": prop(component("value", {})),
             })),
             "multiline string": globalType({}, group({
             })),
@@ -67,7 +67,7 @@ export const $: gliana.T.Model<pd.SourceLocation> = {
                 "quoted": prop(boolean()),
             })),
             "options": globalType({}, group({
-                "value": prop(component("value", {}))
+                "value": prop(component("value", {})),
             })),
             "tagged union": globalType({}, group({
                 // "default option": prop(parametrizedReference("_Reference", { "ReferencedType": typeReference("options")})),
@@ -86,7 +86,7 @@ export const $: gliana.T.Model<pd.SourceLocation> = {
                 "type reference": component("type reference", {}),
             })),
             "value": globalType({}, group({
-                "type": prop(component("type", {}))
+                "type": prop(component("type", {})),
             })),
 
         }),
