@@ -3,7 +3,6 @@ import * as pd from 'pareto-core-data'
 import * as gliana from "lib-liana/dist/submodules/liana"
 import {
     array,
-    boolean,
     component,
     dictionary,
     globalType,
@@ -12,8 +11,9 @@ import {
     reference,
     //string,
     taggedUnion,
-    string,
+    terminal,
     prop,
+    option,
 } from "lib-liana/dist/submodules/liana/shorthands"
 
 const d = pd.d
@@ -21,7 +21,8 @@ const d = pd.d
 export const $: gliana.T.Model<pd.SourceLocation> = {
     'type library': {
         'imports': d({}),
-        'string types': d({
+        'terminal types': d({
+            "boolean": null,
             "text": null,
         }),
         'global types': d({
@@ -45,7 +46,7 @@ export const $: gliana.T.Model<pd.SourceLocation> = {
             })),
             "simple string": globalType({}, group({
                 // "default value": prop(string()),
-                "quoted": prop(boolean()),
+                "quoted": prop(terminal("boolean")),
             })),
             "dictionary": globalType({}, group({
                 // "key": prop(string()),
@@ -64,7 +65,7 @@ export const $: gliana.T.Model<pd.SourceLocation> = {
             })),
             "simple string type": globalType({}, group({
                 // "default value": prop(string()),
-                "quoted": prop(boolean()),
+                "quoted": prop(terminal("boolean")),
             })),
             "options": globalType({}, group({
                 "value": prop(component("value", {})),
@@ -77,13 +78,13 @@ export const $: gliana.T.Model<pd.SourceLocation> = {
                 // "type": prop(parametrizedReference("_Reference", { "ReferencedType": typeReference("types")})),
             })),
             "type": globalType({}, taggedUnion({
-                "dictionary": component("dictionary", {}),
-                "group": component("group", {}),
-                "list": component("list", {}),
-                "multiline string": component("multiline string", {}),
-                "simple string": component("simple string type", {}),
-                "tagged union": component("tagged union", {}),
-                "type reference": component("type reference", {}),
+                "dictionary": option(component("dictionary", {})),
+                "group": option(component("group", {})),
+                "list": option(component("list", {})),
+                "multiline string": option(component("multiline string", {})),
+                "simple string": option(component("simple string type", {})),
+                "tagged union": option(component("tagged union", {})),
+                "type reference": option(component("type reference", {})),
             })),
             "value": globalType({}, group({
                 "type": prop(component("type", {})),
