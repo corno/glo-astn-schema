@@ -1,6 +1,6 @@
 import * as pd from 'pareto-core-data'
 
-import * as gliana from "lib-liana/dist/submodules/liana"
+import * as g_liana from "lib-liana/dist/submodules/liana"
 import {
     array,
     component,
@@ -18,7 +18,7 @@ import {
 
 const d = pd.d
 
-export const $: gliana.T.Model<pd.SourceLocation> = {
+export const $: g_liana.T.Model<pd.SourceLocation> = {
     'type library': {
         'imports': d({}),
         'terminal types': d({

@@ -9,6 +9,7 @@ export const $: gglossary.T.Glossary<pd.SourceLocation> = {
     'parameters': d({
         "Annotation": null,
     }),
+    'imports': d({}),
     'types': d({
         "dictionary": {
             'parameters': d({}),
@@ -183,7 +184,8 @@ export const $: gglossary.T.Glossary<pd.SourceLocation> = {
             })]
         },
     }),
-    'builders': d({}),
-    'interfaces': d({}),
-    'functions': d({}),
+    'type': ['synchronous', {
+        'builders': d({}),
+        'functions': d<gglossary.T.Glossary._ltype.synchronous.functions.D<pd.SourceLocation>>({}),
+    }],
 }
