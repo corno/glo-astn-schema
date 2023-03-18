@@ -184,8 +184,14 @@ export const $: g_glossary.T.Glossary<pd.SourceLocation> = {
             })]
         },
     }),
-    'type': ['synchronous', {
-        'builders': d({}),
-        'functions': d<g_glossary.T.Glossary._ltype.synchronous.functions.D<pd.SourceLocation>>({}),
-    }],
+    'asynchronous': {
+        'interfaces': d({}),
+        'constructors': d({}),
+        'functions': d({}),
+    },
+    'synchronous': {
+        'interfaces': d({}),
+        'constructors': d({}),
+        'functions': d({}),
+    },
 }
