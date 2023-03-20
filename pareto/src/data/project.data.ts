@@ -1,6 +1,5 @@
 import * as pd from 'pareto-core-data'
 
-import { external, this_ } from "lib-pareto-typescript-project/dist/submodules/project/shorthands"
 
 import * as g_project from "lib-pareto-typescript-project/dist/submodules/project"
 

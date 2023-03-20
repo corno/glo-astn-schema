@@ -2,18 +2,12 @@ import * as pd from 'pareto-core-data'
 
 import * as g_liana from "lib-liana/dist/submodules/liana"
 import {
-    array,
     component,
     dictionary,
     globalType,
-    group,
-    r,
-    reference,
-    //string,
+    group, option, prop, r,
     taggedUnion,
-    terminal,
-    prop,
-    option,
+    terminal
 } from "lib-liana/dist/submodules/liana/shorthands"
 
 const d = pd.d
