@@ -128,12 +128,12 @@ export const $: g_glossary.T.Glossary<pd.SourceLocation> = {
                     'type': "group",
                     'arguments': d({}),
                 }]],
-                "list": <g_glossary.T.Type<pd.SourceLocation>>['reference',['type',  {
+                "list": <g_glossary.T.Type<pd.SourceLocation>>['reference', ['type', {
                     'context': <g_glossary.T.Context<pd.SourceLocation>>['local', null],
                     'type': "list",
                     'arguments': d({}),
                 }]],
-                "multiline string": <g_glossary.T.Type<pd.SourceLocation>>['reference',['type',  {
+                "multiline string": <g_glossary.T.Type<pd.SourceLocation>>['reference', ['type', {
                     'context': <g_glossary.T.Context<pd.SourceLocation>>['local', null],
                     'type': "multiline string",
                     'arguments': d({}),
@@ -163,7 +163,7 @@ export const $: g_glossary.T.Glossary<pd.SourceLocation> = {
             'parameters': d({}),
             'type': <g_glossary.T.Type<pd.SourceLocation>>['group', d({
                 "value": {
-                    'type': <g_glossary.T.Type<pd.SourceLocation>>['reference',['type',  {
+                    'type': <g_glossary.T.Type<pd.SourceLocation>>['reference', ['type', {
                         'context': <g_glossary.T.Context<pd.SourceLocation>>['local', null],
                         'type': "value",
                         'arguments': d({}),
@@ -187,11 +187,9 @@ export const $: g_glossary.T.Glossary<pd.SourceLocation> = {
     'asynchronous': {
         'interfaces': d({}),
         'algorithms': d({}),
-        
     },
     'synchronous': {
         'interfaces': d({}),
         'algorithms': d({}),
-        
     },
 }
