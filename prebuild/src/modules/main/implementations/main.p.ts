@@ -16,7 +16,8 @@ export const $$: main = ($) => {
     a_liana.$b.compile<pd.SourceLocation>({
         'getSourceLocation': ($) => $
     })(data, ($) => {
-        pv.logDebugMessage(a_liana_error.$a.createErrorMessage()($))
+        pv.implementMe("DSDSDFSDF")
+        //pv.logDebugMessage(a_liana_error.$a.createErrorMessage()($))
     })
     el.end()
 }

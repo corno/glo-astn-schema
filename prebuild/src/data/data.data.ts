@@ -20,8 +20,8 @@ export const $: g_liana.T.CompileParameters<pd.SourceLocation> = {
                         'serialize': [false],
                     },
                 },
-                'mapped model': {
-                    'model': schema,
+                'mapped library': {
+                    'library': schema,
 
                     'terminal mapping': pd.d({
                         "identifier": ['string', null],
