@@ -7,12 +7,15 @@ import { $ as schema } from "./models/schema.data"
 export const $: g_liana.T.CompileParameters<pd.SourceLocation> = {
     'outputs': pd.a([
         {
-            'path': `../../pareto/src/data/glossary.generated.ts`,
+            'path': pd.a([`../../pareto/src/data/glossary.generated.ts`]),
             'data': {
                 'settings': {
                     'annotations': true,
                     'datamodel': [true, {
-                        'reference mapping': ['string', null],
+                        'constraints mapping': {
+                            'terminal values': true,
+                            'constraints': [true, ['optional', null]]
+                        },
                     }],
                     'visitor interface': [false],
                     'algorithms': {
