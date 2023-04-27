@@ -14,10 +14,12 @@ const d = pd.d
 
 export const $: g_liana.T.Type__Library<pd.SourceLocation> = {
     'imports': d({}),
-    'terminal types': d({
-        "boolean": null,
-        "text": null,
-    }),
+    'labels': {
+        'atom types': d({
+            "boolean": null,
+            "text": null,
+        }),
+    },
     'global types': d({
         // "_Reference": parametrizedType({
         //     "ReferencedType": {},
