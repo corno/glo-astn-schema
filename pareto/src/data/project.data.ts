@@ -7,7 +7,7 @@ const d = pd.d
 
 import { $ as glossary } from "./glossary.generated"
 
-export const $: g_project.T.Project<pd.SourceLocation> = {
+export const $: g_project.T.Project<null> = {
     'author': "Corno",
     'description': "the ASTN schema, used to unmarshall a dataset",
     'license': "TBD",

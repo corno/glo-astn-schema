@@ -2,7 +2,7 @@ import * as pd from 'pareto-core-data'
 
 import * as g_liana from "lib-liana/dist/submodules/liana"
 import {
-    component,
+    resolvedSiblingComponent,
     dictionary,
     globalType,
     group, option, prop, r,
@@ -30,14 +30,14 @@ export const $: g_liana.T.Type__Library<pd.SourceLocation> = {
 
 
         "Root": globalType({}, group({
-            "types": prop(dictionary(component("types", {}))),
+            "types": prop(dictionary(resolvedSiblingComponent("types", {}))),
             //"root type": prop(),
             // "root type": prop(parametrizedReference("_Reference", { "ReferencedType": typeReference("types")})),
 
         })),
 
         "types": globalType({}, group({
-            "value": prop(component("value", {})),
+            "value": prop(resolvedSiblingComponent("value", {})),
         })),
         "simple string": globalType({}, group({
             // "default value": prop(string()),
@@ -45,16 +45,16 @@ export const $: g_liana.T.Type__Library<pd.SourceLocation> = {
         })),
         "dictionary": globalType({}, group({
             // "key": prop(string()),
-            "value": prop(component("value", {})),
+            "value": prop(resolvedSiblingComponent("value", {})),
         })),
         "properties": globalType({}, group({
-            "value": prop(component("value", {})),
+            "value": prop(resolvedSiblingComponent("value", {})),
         })),
         "group": globalType({}, group({
-            "properties": prop(dictionary(component("properties", {}))),
+            "properties": prop(dictionary(resolvedSiblingComponent("properties", {}))),
         })),
         "list": globalType({}, group({
-            "value": prop(component("value", {})),
+            "value": prop(resolvedSiblingComponent("value", {})),
         })),
         "multiline string": globalType({}, group({
         })),
@@ -63,26 +63,26 @@ export const $: g_liana.T.Type__Library<pd.SourceLocation> = {
             "quoted": prop(terminal("boolean")),
         })),
         "options": globalType({}, group({
-            "value": prop(component("value", {})),
+            "value": prop(resolvedSiblingComponent("value", {})),
         })),
         "tagged union": globalType({}, group({
             // "default option": prop(parametrizedReference("_Reference", { "ReferencedType": typeReference("options")})),
-            "options": prop(dictionary(component("options", {}))),
+            "options": prop(dictionary(resolvedSiblingComponent("options", {}))),
         })),
         "type reference": globalType({}, group({
             // "type": prop(parametrizedReference("_Reference", { "ReferencedType": typeReference("types")})),
         })),
         "type": globalType({}, taggedUnion({
-            "dictionary": option(component("dictionary", {})),
-            "group": option(component("group", {})),
-            "list": option(component("list", {})),
-            "multiline string": option(component("multiline string", {})),
-            "simple string": option(component("simple string type", {})),
-            "tagged union": option(component("tagged union", {})),
-            "type reference": option(component("type reference", {})),
+            "dictionary": option(resolvedSiblingComponent("dictionary", {})),
+            "group": option(resolvedSiblingComponent("group", {})),
+            "list": option(resolvedSiblingComponent("list", {})),
+            "multiline string": option(resolvedSiblingComponent("multiline string", {})),
+            "simple string": option(resolvedSiblingComponent("simple string type", {})),
+            "tagged union": option(resolvedSiblingComponent("tagged union", {})),
+            "type reference": option(resolvedSiblingComponent("type reference", {})),
         })),
         "value": globalType({}, group({
-            "type": prop(component("type", {})),
+            "type": prop(resolvedSiblingComponent("type", {})),
         })),
 
     }),
